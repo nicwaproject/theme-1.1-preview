@@ -1,0 +1,1081 @@
+:root {
+    --primary-color: #7B3F40;
+    --secondary-color: #D1DCD8;
+    --third-color: #9D5052;
+    --fourth-color: rgba(123, 63, 64, 0.2);
+    --primary-font: "Updock", cursive;
+    --secondary-font: "Old Standard TT", serif;
+}
+
+body {
+    font-family: var(--secondary-font);
+    margin: 0;
+}
+
+/* ........................COVER.................. */
+
+.invitation-cover {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-image: url('gallery1.jpeg'); /* Desktop background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: auto;
+    overflow-y: hidden;
+}
+
+.cover-content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    max-width: 300px;
+    line-height:0.8;
+    color: black;
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.invitation-content {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+.couple {
+    font-size: 4em;
+    font-weight: bold;
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.guest {
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+
+.invite-text {
+    font-size: 1em;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+#openButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: var(--third-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-style: normal;
+}
+
+#openButton:hover {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+/* NAVIGASI */
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--third-color);
+    z-index: 999;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Jarak antar ikon */
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px; /* Ukuran ikon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color); /* Warna teks saat hover */
+}
+
+
+/* ................................SECTION........................ */
+.section {
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+.section h2 {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.8em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    color: black;
+    text-decoration: underline;
+}
+/* .......SECTION 1........... */
+
+#section1 {
+    position: relative;
+    background-image: url('gallery1.jpeg'); /* Desktop background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 90vh;
+    padding: 0;
+    overflow: hidden;
+}
+
+#section1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Gelap transparan */
+    z-index: 1; /* Tetap di atas background */
+}
+
+#lottie-animation {
+    position: absolute;
+    top: 0; /* Letakkan di bagian atas */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Sesuaikan ukuran */
+    height: auto; /* Sesuaikan ukuran */
+    z-index: 99; /* Pastikan di atas elemen lain */
+}
+
+.text-container {
+    position: relative; /* Pastikan teks tetap di atas */
+    z-index: 2; /* Menjadikan teks lebih di atas dibanding gambar */
+    margin: 20px;
+    padding: 4px 20px;
+    border-radius: 10px; /* Add border radius */
+    background-color: rgba(126, 127, 82, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.couple-name {
+    font-size: 4em;
+    color: white;
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.date-section1 {
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.decoration {
+    position: absolute;
+    bottom: 0; /* Posisikan di bawah */
+    left: 50%;
+    transform: translateX(-50%); /* Pusatkan */
+    width: 100%; /* Atur ukuran */
+    opacity: 0.8;
+    z-index: 1; /* Pastikan gambar di bawah teks */
+}
+
+
+/* ..........SECTION 2......... */
+#section2 {
+    background-color: var(--primary-color); /* Change background color if needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Align items to the top */
+    padding: 20px;
+    color:white;
+    position: relative; /* Add relative positioning to section */
+    overflow: hidden;
+}
+
+.quran-verse {
+    max-width: 700px;
+    padding: 10px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.verse {
+    font-size: 24px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.translation {
+    font-size: 18px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.surah {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/*.............. COUNTDOWN.............. */
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.unit {
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    padding: 10px; 
+}
+
+.unit span {
+    display: block;
+    font-size: 24px;
+}
+
+.number {
+    font-size: 36px;
+    font-weight: bold;
+    color: white; /* Number color */
+}
+
+.label {
+    font-size: 18px;
+    color: white; /* Label color */
+}
+
+#birds-animation {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* .............section 4 profile........... */
+#section4 {
+    padding-top: 20px;
+    background-image: url('background2.jpeg'); /* Mobile background image */
+    background-size: cover;
+    background-position: center;
+    color:black;
+    position: relative;
+    text-align: center;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.profile {
+    position: relative;
+    margin: 40px;
+    text-align: center;
+    min-width: 350px;
+}
+
+.flower-bg1, .flower-bg2 {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; /* Sesuaikan dengan ukuran profil */
+    height: auto;
+    z-index: 1; /* Pastikan ada di belakang foto */
+}
+
+.flower-bg1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flower-bg2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+.profile-img {
+    position: relative;
+    width: 250px; /* Sesuaikan ukuran foto */
+    height: auto;
+    object-fit: cover; 
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-info h3 {
+    margin-bottom: 5px;
+    font-size:1.4em;
+}
+
+.profile-info p {
+    margin-bottom: 10px;
+}
+
+.instagram-button {
+    padding: 8px 16px;
+    background-color: var(--third-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.instagram-button:hover {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+/* .............SECTION 5 WEDDING DETAIL............. */
+#section5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding: 50px 10px;
+    background-color: var(--primary-color);
+    color:white;
+    position: relative;
+    overflow-y: hidden;
+}
+
+#section5 h2 {
+    color: white;
+    text-decoration: underline;
+}
+
+.wedding-detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event {
+    position: relative;
+    flex: 1;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.event-item i {
+    font-size: 40px;
+}
+
+.event-detail {
+    display: flex;
+    margin: 70px 0;
+    width: 100%;
+}
+
+.event-item {
+    padding: 10px;
+}
+
+.event-item:nth-child(2) {
+    border-left: 2px solid white; /* Garis vertikal */
+}
+
+.event-item1 {
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom:  0;
+}
+
+.event-item2 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.event h3 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    text-decoration: underline;
+}
+
+.location-button {
+    margin-top: 50px;
+    padding: 8px 16px;
+    background-color: var(--third-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.location-button:hover {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+#dot-animation {
+    position: absolute;
+    top: 20%; /* Letakkan di bagian atas */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Sesuaikan ukuran */
+    height: auto; /* Sesuaikan ukuran */
+    z-index: 99; /* Pastikan di atas elemen lain */
+    opacity: 30%;
+}
+
+/* .........SECTION 6 GALLERY............ */
+
+#section6 {
+    text-align: center;
+    padding: 20px;
+    background-image: url('background2.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+#section6 h2 {
+    margin: 15px;
+}
+
+/* Gallery styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ubah menjadi 4 kolom */
+    gap: 10px; /* Jarak antar gambar */
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.gallery img:first-child {
+    grid-column: span 2; /* Membuat gambar pertama full width */
+}
+
+.gallery img:nth-child(6) {
+    grid-column: span 3; /* Membuat gambar keenam full width */
+}
+
+/* .............SECTION 7 MESSAGE........ */
+
+/* General section styling */
+#section7 {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+
+#section7 h2 {
+    color: white;
+}
+
+
+/* Form styling */
+#messageForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#messageForm input,
+#messageForm textarea {
+    width: 100%;
+    max-width: 350px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#messageForm button {
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:var(--third-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#messageForm button:hover {
+    background-color: var(--secondary-color);
+    color: black;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Message list styling */
+#messageList {
+    margin-top: 20px;
+    max-height: 400px; /* Atur tinggi maksimal, misalnya 200px */
+    overflow-y: auto; /* Tambahkan scroll vertikal */
+    max-width: 350px;
+    margin: 20px auto;
+    border: 1px solid white; /* Tambahkan border untuk kotak pesan */
+    padding: 10px; /* Tambahkan padding */
+}
+
+.message {
+    color: black;
+    border: 1px solid white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message .message-content {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.message .message-author {
+    font-family: var(--primary-font);
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+
+.message .message-body {
+    margin-top: 10px;
+}
+
+/* CSS untuk mengganti font placeholder */
+#formGuestName::placeholder,
+#guestMessage::placeholder {
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px; /* Ganti dengan ukuran font yang diinginkan */
+    color: #888; /* Ganti dengan warna yang diinginkan */
+}
+/* CSS untuk mengganti font input */
+#formGuestName,
+#guestMessage {
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px; /* Ganti dengan ukuran font yang diinginkan */
+    color: #333; /* Ganti dengan warna yang diinginkan */
+}
+
+/* ...........SECTION 8............. */
+#section8 {
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-style: normal;
+    background-image: url('background2.jpeg'); /* Mobile background image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: black; /* Text color */
+    height: auto; /* Set height to 100% of viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    gap: 50px;
+    padding: 30px;
+    overflow-y: hidden;
+}
+
+#section8 h2 {
+    position: relative;
+    z-index: 2;
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.2em;
+}
+
+#section8 p {
+    position: relative;
+    z-index: 2;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+}
+
+.bank-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 50px;
+}
+
+.gift-details {
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.gift-details p {
+    margin: 10px 0;
+}
+
+.bank-item {
+    background-color: var(--fourth-color);
+    border-radius: 20px;
+    padding: 20px;
+    min-width: 200px;
+    min-height: 180px;
+}
+
+.bank-logo1 {
+    width: 200px;
+    height: auto;
+}
+
+.bank-logo2 {
+    width: 120px;
+    height: auto;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--third-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+/* THANK-YOU SECTION */
+.thank-you {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url('gallery1.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    margin: 0;
+    padding: 50px 20px;
+    line-height: 1;
+}
+
+/* Overlay */
+.thank-you::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Gelap transparan */
+    z-index: 1;
+}
+
+.thank-you h2 {
+    position: relative;
+    z-index: 2;
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.2em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.thank-you p {
+    position: relative;
+    z-index: 2;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+}
+
+.name-decor {
+    position: relative;
+    z-index: 2;
+    width: 250px; /* Sesuaikan ukuran foto */
+    height: auto;
+    object-fit: cover;
+    margin: 0 0 20px 0;
+}
+
+
+/* Footer */
+footer {
+    background-color: white;
+    padding-bottom: 50px;
+    padding-top: 15px;
+}
+  
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+  
+.logo img {
+    height: 40px;
+}
+  
+.social-media-ncp {
+    display: flex;
+}
+  
+.social-icon {
+    color: var(--primary-color); /* Warna ikon */
+    font-size: 24px; /* Ukuran ikon */
+    margin-left: 15px; /* Jarak antar ikon */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+  
+.social-icon:hover {
+    color: var(--secondary-color); /* Warna saat hover */
+}
+
+
+/* ...............  ANIMATION............... */
+.fade-in {
+    opacity: 0;
+    transition: opacity 5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.fade-slide {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.fade-slide.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* .....................AUDIO CONTROL.................... */
+.audio-controls {
+    position: fixed;
+    top: 60%;
+    left: 10px; /* Tetap di sisi kiri */
+    transform: translateY(-50%);
+    z-index: 999;
+    text-align: center;
+    display: none;
+}
+
+.play-btn {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* SEPERATOR  */
+
+.separator {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+.separator::before, 
+.separator::after {
+    content: '';
+    height: 1px; /* Membuat garis horizontal */
+    flex-grow: 1;
+    width: 100px;
+    background-color: black;
+}
+
+/* ..............Style for the modal............. */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption {  
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ......................MEDIA QUERY..................... */
+@media (max-width: 600px) {
+    /* ...........COVER.................*/
+    .invitation-cover {
+        overflow-y: hidden;
+        background-image: url('gallery5.jpeg');
+    }
+    .couple {
+        font-size: 4em;
+    }
+    .guest {
+        font-size: 1.7em;
+    }
+    button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    /* SECTION1 */
+    #section1 {
+        background-image: url('gallery2.jpeg'); /* Mobile background image */
+    }
+
+    /* SECTION 2 */
+    #section2 .quran-verse {
+        max-width: 350px;
+    }
+    .verse {
+        font-size: 20px;
+        line-height: 1.8;
+    }
+    .translation {
+        font-size: 13px;
+    }
+    /* SECTION3 */
+    .unit {
+        margin: 5px;
+        max-width: 80px;
+    }
+
+    .unit span {
+        font-size: 20px;
+    }
+    
+    .number {
+        font-size: 18px;
+    }
+    
+    .label {
+        font-size: 12px;
+    }
+
+    /* SECTION 4 */
+    #section4 {
+        background-image: url('background.jpeg');
+    }
+
+    .profile-container {
+        flex-direction: column;
+    }
+    /* SECTION 5 */
+    .wedding-detail {
+        flex-direction: column;
+        align-items: center;
+    }
+    .event {
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    /* SECTION 6 */
+    #section6 {
+        background-image: url('background.jpeg');
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .gallery img:first-child {
+        grid-column: span 2; /* Membuat gambar pertama full width */
+    }
+
+    .gallery img:nth-child(6) {
+        grid-column: span 2; /* Membuat gambar keenam full width */
+    }
+
+    /* SECTION8 */
+    #section8 {
+        background-image: url('background.jpeg');
+    }
+    .thank-you {
+        padding: 10px 20px;
+        line-height: 1;
+        background-image: url('gallery2.jpeg');
+    }
+
+    .bank-container {
+        flex-direction: column;
+    }
+
+    /* SECTION 9 */
+    #section9 {
+        background-image: url('background.jpeg');
+    }
+}
