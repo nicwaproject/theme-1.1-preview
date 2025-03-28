@@ -211,43 +211,49 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Function to load messages
-    function loadMessages() {
-        fetch('https://theme-1-message-handler.glitch.me/messages')
-            .then(response => response.json())
-            .then(data => {
-                const messageList = document.getElementById('messageList');
-                if (messageList) {
-                    messageList.innerHTML = '';
-                    data.forEach(msg => {
-                        const messageItem = document.createElement('div');
-                        messageItem.classList.add('message'); // Add 'message' class
+function loadMessages() {
+    fetch('https://theme-1-message-handler.glitch.me/messages')
+        .then(response => response.json())
+        .then(data => {
+            const messageList = document.getElementById('messageList');
+            if (messageList) {
+                messageList.innerHTML = '';
+                data.forEach(msg => {
+                    const messageItem = document.createElement('div');
+                    messageItem.classList.add('message'); // Add 'message' class
 
-                        // Element for the author
-                        const authorElement = document.createElement('div');
-                        authorElement.classList.add('message-author');
-                        authorElement.textContent = msg.name;
+                    // Font Awesome Icon
+                    const iconElement = document.createElement('i');
+                    iconElement.classList.add('fas', 'fa-user-circle', 'message-icon');
 
-                        // Element for the content
-                        const contentElement = document.createElement('div');
-                        contentElement.classList.add('message-content');
-                        contentElement.textContent = msg.message;
+                    // Element for the author
+                    const authorElement = document.createElement('div');
+                    authorElement.classList.add('message-author');
+                    authorElement.appendChild(iconElement); // Append icon before name
+                    authorElement.appendChild(document.createTextNode(` ${msg.name}`));
 
-                        // Element to contain both the author and the content
-                        const bodyElement = document.createElement('div');
-                        bodyElement.classList.add('message-body');
-                        bodyElement.appendChild(authorElement);
-                        bodyElement.appendChild(contentElement);
+                    // Element for the content
+                    const contentElement = document.createElement('div');
+                    contentElement.classList.add('message-content');
+                    contentElement.textContent = msg.message;
 
-                        // Append the bodyElement to the messageItem
-                        messageItem.appendChild(bodyElement);
+                    // Element to contain both the author and the content
+                    const bodyElement = document.createElement('div');
+                    bodyElement.classList.add('message-body');
+                    bodyElement.appendChild(authorElement);
+                    bodyElement.appendChild(contentElement);
 
-                        // Append the messageItem to the messageList
-                        messageList.appendChild(messageItem);
-                    });
-                }
-            })
-            .catch(error => console.error('Error:', error));
-    }
+                    // Append the bodyElement to the messageItem
+                    messageItem.appendChild(bodyElement);
+
+                    // Append the messageItem to the messageList
+                    messageList.appendChild(messageItem);
+                });
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}
+
 
     window.onload = loadMessages;
 });
